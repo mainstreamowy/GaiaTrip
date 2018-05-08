@@ -1,9 +1,11 @@
 package com.example.dnl.gaiatrip;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity
     private LayoutInflater inflater;
 
     private TextView fragment_name;
-
+    private Fragment fragment = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,12 +55,16 @@ public class MainActivity extends AppCompatActivity
 
         View mainBarView = navigationView.getHeaderView(0);
 
+        fragment=new NewsFragment();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.content_frame, fragment);
+        ft.commit();
 
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        Fragment fragment = null;
+       fragment = null;
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
@@ -82,7 +88,7 @@ public class MainActivity extends AppCompatActivity
                 else{
                     this.startActivity(intentMain);
                 }
-*/              this.getSupportFragmentManager().popBackStack();
+*/              fragment= new NewsFragment();
                 Log.i("Content "," Main layout ");
                 break;
 
@@ -122,6 +128,7 @@ public class MainActivity extends AppCompatActivity
         if (fragment != null) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragment);
+            ft.addToBackStack(null);
             ft.commit();
         }
 
@@ -129,6 +136,7 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 
 
 }

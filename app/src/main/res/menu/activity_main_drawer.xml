@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_news"
+            android:title="NEWS"
+            android:icon="@drawable/news" />
+        <item
+            android:id="@+id/nav_top_places"
+            android:title="TOP PLACES"
+            android:icon="@drawable/place"/>
+        <item
+            android:id="@+id/nav_map"
+            android:title="MAP"
+            android:icon="@drawable/map"/>
+
+        <item
+            android:id="@+id/nav_discover"
+            android:title="DISCOVER"
+            android:icon="@drawable/news"/>
+
+        <item
+            android:id="@+id/nav_near_you"
+            android:title="NEAR YOU"
+            android:icon="@drawable/place"
+            />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:title="SETTINGS"
+            android:icon="@drawable/settingss"
+            />
+    </group>
+
+</menu>
+

@@ -17,7 +17,7 @@
         android:foregroundGravity="center_vertical"
         android:gravity="center"
         android:scaleType="fitStart"
-        android:text="NEWS"
+        android:text="@string/news"
         android:textColor="#ff0000"
         android:textSize="20dp" />
 
@@ -34,7 +34,7 @@
         android:foregroundGravity="center_vertical"
         android:layout_centerVertical="true"
         android:scaleType="fitStart"
-        android:text="THE GAIA TRAVEL APP"
+        android:text="@string/gaia"
         android:textSize="18dp" />
 
 </RelativeLayout>

@@ -8,31 +8,31 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_news"
-            android:title="NEWS"
+            android:title="@string/news"
             android:icon="@drawable/news" />
         <item
             android:id="@+id/nav_top_places"
-            android:title="TOP PLACES"
+            android:title="@string/top_places"
             android:icon="@drawable/place"/>
         <item
             android:id="@+id/nav_map"
-            android:title="MAP"
+            android:title="@string/map"
             android:icon="@drawable/map"/>
 
         <item
             android:id="@+id/nav_discover"
-            android:title="DISCOVER"
+            android:title="@string/discover"
             android:icon="@drawable/news"/>
 
         <item
             android:id="@+id/nav_near_you"
-            android:title="NEAR YOU"
+            android:title="@string/near_you"
             android:icon="@drawable/place"
             />
 
         <item
             android:id="@+id/nav_settings"
-            android:title="SETTINGS"
+            android:title="@string/settings"
             android:icon="@drawable/settingss"
             />
     </group>

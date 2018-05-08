@@ -18,6 +18,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -67,36 +69,47 @@ public class MainActivity extends AppCompatActivity
         switch(id)
         {
             case R.id.nav_news:
-                textView.setText("NEWS");
-                Log.d("GUI", "User Pressed Add Songs Button!");
-           //     fragment = new AddSongsFragment();
+                textView.setText(R.string.news);
+                Log.d("GUI", "User Pressed News Button!");
+                Intent intentMain = new Intent(getApplicationContext() ,
+                        MainActivity.class);
+                if(fragment!=null){
+                    fragment.getActivity().startActivity(intentMain);
+                }
+                else{
+                    this.startActivity(intentMain);
+                }
+
+                Log.i("Content "," Main layout ");
                 break;
 
             case R.id.nav_top_places:
-                textView.setText("TOP PLACES");
-                Log.d("GUI", "User Pressed My library Button!");
+                textView.setText(R.string.top_places);
+                Log.d("GUI", "User Pressed Top Places Button!");
                 fragment = new TopPlacesFragment();
                 break;
 
             case R.id.nav_map:
-                textView.setText("MAP");
-                Log.d("GUI", "User Pressed Explore Button!");
+                textView.setText(R.string.map);
+                Log.d("GUI", "User Pressed Map Button!");
                 fragment = new MapFragment();
                 break;
 
             case R.id.nav_discover:
-                textView.setText("DISCOVER");
-                Log.d("GUI", "User Pressed My Songs Button!");
+                textView.setText(R.string.discover);
+                Log.d("GUI", "User Pressed Discover Button!");
                 fragment = new DiscoverFragment(); // As dummy Fragment
                 break;
 
             case R.id.nav_near_you:
-                textView.setText("NEAR YOU");
+                textView.setText(R.string.near_you);
+                Log.d("GUI", "User Pressed Near You Button!");
                 fragment = new NearYouFragment();
                 break;
 
             case R.id.nav_settings:
-                textView.setText("SETTINGS");
+                textView.setText(R.string.settings);
+                Log.d("GUI", "User Pressed Settings Button!");
                 fragment = new SettingsFragment();
                 break;
 

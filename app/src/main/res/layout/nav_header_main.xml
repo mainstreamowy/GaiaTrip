@@ -14,7 +14,7 @@
     android:layout_alignParentBottom="true">
 
 
-
+<!---
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,5 +29,5 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:text="android.studio@android.com" />
-
+-->
 </LinearLayout>

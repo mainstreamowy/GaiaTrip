@@ -16,7 +16,7 @@
         android:foregroundGravity="center_vertical"
         android:layout_centerVertical="true"
         android:scaleType="fitStart"
-        android:text="THE GAIA TRAVEL APP"
-        android:textSize="18dp" />
+        android:text="@string/gaia"
+        android:textSize="18sp" />
 
 </android.support.constraint.ConstraintLayout>

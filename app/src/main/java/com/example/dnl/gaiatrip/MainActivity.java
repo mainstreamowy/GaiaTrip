@@ -54,8 +54,6 @@ public class MainActivity extends AppCompatActivity
         View mainBarView = navigationView.getHeaderView(0);
 
 
-
-
     }
 
     @Override
@@ -71,6 +69,11 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_news:
                 textView.setText(R.string.news);
                 Log.d("GUI", "User Pressed News Button!");
+                /*
+                Intent detailsIntent = new Intent(MainActivity.this, MainActivity.class);
+                detailsIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(detailsIntent);
+                //
                 Intent intentMain = new Intent(getApplicationContext() ,
                         MainActivity.class);
                 if(fragment!=null){
@@ -79,7 +82,7 @@ public class MainActivity extends AppCompatActivity
                 else{
                     this.startActivity(intentMain);
                 }
-
+*/              this.getSupportFragmentManager().popBackStack();
                 Log.i("Content "," Main layout ");
                 break;
 

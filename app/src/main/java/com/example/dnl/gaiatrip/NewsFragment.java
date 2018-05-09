@@ -5,7 +5,6 @@ package com.example.dnl.gaiatrip;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +19,7 @@ public class NewsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        View view = inflater.inflate(R.layout.activity_main, null);
+        View view = inflater.inflate(R.layout.fragment_news, null);
 
 
         String [] name = {"FROM AFAR IT WAS AN ISLAND","CORRIDA PORTUCALE 2018","Meo Marés Vivas ‘18"};

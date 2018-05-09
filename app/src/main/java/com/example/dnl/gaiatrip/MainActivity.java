@@ -75,20 +75,8 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_news:
                 textView.setText(R.string.news);
                 Log.d("GUI", "User Pressed News Button!");
-                /*
-                Intent detailsIntent = new Intent(MainActivity.this, MainActivity.class);
-                detailsIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(detailsIntent);
-                //
-                Intent intentMain = new Intent(getApplicationContext() ,
-                        MainActivity.class);
-                if(fragment!=null){
-                    fragment.getActivity().startActivity(intentMain);
-                }
-                else{
-                    this.startActivity(intentMain);
-                }
-*/              fragment= new NewsFragment();
+
+                 fragment= new NewsFragment();
                 Log.i("Content "," Main layout ");
                 break;
 

@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import android.widget.Toast;
 
 
 public class SingleItemFragment extends Fragment implements View.OnClickListener {
@@ -22,13 +22,17 @@ public class SingleItemFragment extends Fragment implements View.OnClickListener
     private String text;
     private String name;
     private String date;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-
+        Bundle bundle = this.getArguments();
+        name=bundle.getString("name","");
+        text=bundle.getString("description","");
+        text=bundle.getString("date","");
+        lat=bundle.getDouble("LAT",0.0);
+        lng=bundle.getDouble("LONG",0.0);
         View view = inflater.inflate(R.layout.single_item, null);
         ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
         //   Button button =(Button) view.findViewById(R.id.button2);
@@ -46,7 +50,8 @@ public class SingleItemFragment extends Fragment implements View.OnClickListener
 
         TextView textView;
         textView = (TextView) view.findViewById(R.id.textView);
-
+        Toast.makeText(getActivity(), text,
+                Toast.LENGTH_LONG).show();
         textView.setText(text);
 
 
@@ -67,8 +72,8 @@ public class SingleItemFragment extends Fragment implements View.OnClickListener
         switch (v.getId()) {
             case R.id.b_ShowOnMap:
                 Bundle arguments = new Bundle();
-                arguments.putDouble("LAT",2.0 );
-                arguments.putDouble("LONG",3.0);
+                arguments.putDouble("LAT",lat );
+                arguments.putDouble("LONG",lng);
 
                 MapFragment myFragment = new MapFragment();
                 myFragment.setArguments(arguments);

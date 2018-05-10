@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:background="@drawable/drawable_line_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/food"
+            android:id="@+id/food_button"
+            android:layout_gravity="center"/>
+
+        <ImageButton android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/theater"
+            android:id="@+id/theatre"
+            android:layout_gravity="bottom"/>
+        <ImageButton android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arch"
+            android:id="@+id/architecture"
+            android:layout_gravity="center"/>
+
+        <ImageButton android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hotel"
+            android:id="@+id/sleep"
+            android:layout_gravity="bottom"/>
+        <ImageButton android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cart"
+            android:id="@+id/shop"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

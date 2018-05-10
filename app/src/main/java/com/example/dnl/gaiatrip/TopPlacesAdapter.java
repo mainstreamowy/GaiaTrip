@@ -3,13 +3,9 @@ package com.example.dnl.gaiatrip;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,10 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
-import java.util.Map;
-
-public class ViewPagerAdapter extends PagerAdapter implements View.OnClickListener{
+public class TopPlacesAdapter  extends PagerAdapter implements View.OnClickListener{
 
     private Context context;
     private LayoutInflater layoutInflater;
@@ -31,7 +24,7 @@ public class ViewPagerAdapter extends PagerAdapter implements View.OnClickListen
     private Double[] lat;
     private Double[] lng;
     private int currentPage;
-    public ViewPagerAdapter(Context context, String[] name, String [] date, String[] text,Double[] lat,Double[]lng ) {
+    public TopPlacesAdapter(Context context, String[] name, String [] date, String[] text,Double[] lat,Double[]lng ) {
         this.context = context;
         this.name= name;
         this.date = date;
@@ -56,7 +49,7 @@ public class ViewPagerAdapter extends PagerAdapter implements View.OnClickListen
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.viewpager_layout, null);
         ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
-     //   Button button =(Button) view.findViewById(R.id.button2);
+        //   Button button =(Button) view.findViewById(R.id.button2);
 
         TextView tvName;
         tvName=(TextView)view.findViewById(R.id.tvName);
@@ -70,7 +63,7 @@ public class ViewPagerAdapter extends PagerAdapter implements View.OnClickListen
         tvDate.setText(date[position]);
 
         TextView textView;
-               textView = (TextView) view.findViewById(R.id.textView);
+        textView = (TextView) view.findViewById(R.id.textView);
 
         textView.setText(text[position]);
 
@@ -121,3 +114,5 @@ public class ViewPagerAdapter extends PagerAdapter implements View.OnClickListen
         return currentPage;
     }
 }
+
+

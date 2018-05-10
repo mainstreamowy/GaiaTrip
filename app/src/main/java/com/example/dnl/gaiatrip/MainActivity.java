@@ -87,9 +87,9 @@ public class MainActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_map:
-                textView.setText(R.string.map);
+                textView.setText("Single item");
                 Log.d("GUI", "User Pressed Map Button!");
-                fragment = new MapFragment();
+                fragment = new SingleItemFragment();
                 break;
 
             case R.id.nav_discover:
@@ -98,10 +98,10 @@ public class MainActivity extends AppCompatActivity
                 fragment = new DiscoverFragment(); // As dummy Fragment
                 break;
 
-            case R.id.nav_near_you:
-                textView.setText(R.string.near_you);
+            case R.id.nav_places:
+                textView.setText(R.string.places);
                 Log.d("GUI", "User Pressed Near You Button!");
-                fragment = new NearYouFragment();
+                fragment = new ListFragment();
                 break;
 
             case R.id.nav_settings:

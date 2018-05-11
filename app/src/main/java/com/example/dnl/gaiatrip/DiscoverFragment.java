@@ -52,7 +52,7 @@ public class DiscoverFragment extends Fragment {
             @Override
             public void onMapReady(GoogleMap googleMap) {
                 LatLng coordinates = new LatLng(41.127468, -8.626266);
-                googleMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.hotel))
+                googleMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.defaultMarker())
                         .position(coordinates).title("Place"));
                 googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(coordinates, 15));
                 mapView.onResume();

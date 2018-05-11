@@ -18,7 +18,7 @@ public class SingleItemFragment extends Fragment implements View.OnClickListener
     double lat;
     double lng;
 
-    private Integer  images = R.drawable.slider1;
+    private Integer  images ;
     private String text;
     private String name;
     private String date;
@@ -29,8 +29,8 @@ public class SingleItemFragment extends Fragment implements View.OnClickListener
 
         Bundle bundle = this.getArguments();
         name=bundle.getString("name","");
-        text=bundle.getString("description","");
-        text=bundle.getString("date","");
+        text=bundle.getString("description","heyho");
+        date=bundle.getString("date","");
         lat=bundle.getDouble("LAT",0.0);
         lng=bundle.getDouble("LONG",0.0);
         View view = inflater.inflate(R.layout.single_item, null);
@@ -50,12 +50,10 @@ public class SingleItemFragment extends Fragment implements View.OnClickListener
 
         TextView textView;
         textView = (TextView) view.findViewById(R.id.textView);
-        Toast.makeText(getActivity(), text,
-                Toast.LENGTH_LONG).show();
         textView.setText(text);
 
 
-
+        images=bundle.getInt("img",R.drawable.slider1);
 
 
 

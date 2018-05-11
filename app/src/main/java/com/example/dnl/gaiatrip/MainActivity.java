@@ -131,11 +131,6 @@ public class MainActivity extends AppCompatActivity
                 fragment = new TopPlacesFragment();
                 break;
 
-            case R.id.nav_map:
-                textView.setText("Single item");
-                Log.d("GUI", "User Pressed Map Button!");
-                fragment = new SingleItemFragment();
-                break;
 
             case R.id.nav_discover:
                 textView.setText(R.string.discover);

@@ -17,7 +17,7 @@ public class TopPlacesAdapter  extends PagerAdapter implements View.OnClickListe
 
     private Context context;
     private LayoutInflater layoutInflater;
-    private Integer [] images = {R.drawable.slider1, R.drawable.slider2, R.drawable.slider3};
+    private Integer [] images = {R.drawable.clube, R.drawable.afurada, R.drawable.parque};
     private String[] text;
     private String[] name;
     private String[] date;
